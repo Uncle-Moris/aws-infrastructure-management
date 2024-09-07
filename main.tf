@@ -4,11 +4,10 @@ provider "aws" {
 
 resource "aws_instance" "main_instance" {
   ami = "ami-0e04bcbe83a83792e"
-  #   instance_type = "t2.micro"
-
-  #   tags = {
-  #     Name = "ExampleEC2Instance"
-  #   }
+  instance_type = "t2.micro" 
+  tags = {
+    "Name": "test"
+  } 
 }
 
 variable "aws_region" {
