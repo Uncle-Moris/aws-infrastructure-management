@@ -1,3 +1,14 @@
+terraform {
+  backend "s3" {
+    bucket         = "terraform-state-bucket-mauwoz1122"
+    key            = "terraform/terraform.tfstate"            
+    region         = "eu-central-1"                          
+    dynamodb_table = "terraform-state-locks"              
+    encrypt        = true                                 
+  }
+}
+
+
 provider "aws" {
   region = var.aws_region
 }
@@ -6,13 +17,13 @@ resource "aws_instance" "main_instance" {
   ami = "ami-0e04bcbe83a83792e"
   instance_type = "t2.micro" 
   tags = {
-    "Name": "test"
+    "Name": "test 12"
   } 
 }
 
 resource "aws_instance" "test_instance" {
   ami = "ami-0e04bcbe83a83792e"
-  instance_type = "t2.invalid" 
+  instance_type = "t2.micro" 
   tags = {
     "Name": "to-fix"
   } 
