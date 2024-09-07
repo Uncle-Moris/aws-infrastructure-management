@@ -4,6 +4,6 @@ module "ec2_instance" {
   instance_type      = var.instance_type
 
   tags = {
-    Name = "New instance"
+    Name = "HG" 
   }
 }
