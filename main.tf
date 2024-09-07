@@ -17,13 +17,13 @@ resource "aws_instance" "main_instance" {
   ami = "ami-0e04bcbe83a83792e"
   instance_type = "t2.micro" 
   tags = {
-    "Name": "test"
+    "Name": "test 12"
   } 
 }
 
 resource "aws_instance" "test_instance" {
   ami = "ami-0e04bcbe83a83792e"
-  instance_type = "t2.invalid" 
+  instance_type = "t2.micro" 
   tags = {
     "Name": "to-fix"
   } 
