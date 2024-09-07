@@ -17,7 +17,7 @@ resource "aws_instance" "main_instance" {
   ami = "ami-0e04bcbe83a83792e"
   instance_type = "t2.micro" 
   tags = {
-    "Name": "test 12"
+    "Name": "test main"
   } 
 }
 
